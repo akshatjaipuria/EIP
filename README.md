@@ -7,7 +7,7 @@ Filters/Kernals:
 N X N matrices that are responsible for extracting features from input, like edges, gradients etc. in case of images.
 
 Epoches:
-A single pass of entire training dataset through the dnn model.
+1 Epoche is a  single pass of entire training dataset through the dnn model.
 
 
 
