@@ -11,3 +11,8 @@ Epoches:
 
 
 
+Receptive Field:
+Number of pixels, a pixel in the succeeding channels is looking at. If considering neighbouring channel, its local and if considering overall, its global.
+
+
+
