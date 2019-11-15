@@ -1,4 +1,4 @@
-[0.04132183310781884, 0.9906]
+[0.025248916832826217, 0.9936]
 
 Convolution:
 The process of using filters/kernals on input, affecting it in a way that produces features as output.
