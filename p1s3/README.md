@@ -1,54 +1,54 @@
 Accuracy on test data is: 82.55
 
-model = Sequential()
-model.add(SeparableConv2D(32, 3, 3, border_mode='same', input_shape=(32, 32, 3), use_bias=False, kernel_regularizer=l2(0.01))) #32 #3
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(SeparableConv2D(32, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #32 #5
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(SeparableConv2D(32, 3, 3, use_bias=False, kernel_regularizer=l2(0.01))) #30 #7
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(MaxPooling2D(pool_size=(2, 2))) #15 #8
-
-model.add(SeparableConv2D(64, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #15 #12
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(SeparableConv2D(64, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #15 #16
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(SeparableConv2D(64, 3, 3, use_bias=False, kernel_regularizer=l2(0.01))) #13 #20
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(MaxPooling2D(pool_size=(2, 2))) #6 #22
-
-model.add(SeparableConv2D(128, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #6 #30
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(SeparableConv2D(128, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #6 #38
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(SeparableConv2D(256, 3, 3, use_bias=False, kernel_regularizer=l2(0.01))) #4 #46
-model.add(Activation('relu'))
-model.add(BatchNormalization())
-model.add(Dropout(0.2))
-model.add(MaxPooling2D(pool_size=(2, 2))) #2 #50
-
-model.add(SeparableConv2D(num_classes, 1, 1)) #2 #50
-
-model.add(GlobalAveragePooling2D())
-model.add(Activation('softmax'))
-
-
+model = Sequential()  
+model.add(SeparableConv2D(32, 3, 3, border_mode='same', input_shape=(32, 32, 3), use_bias=False, kernel_regularizer=l2(0.01))) #32 #3  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(SeparableConv2D(32, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #32 #5  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(SeparableConv2D(32, 3, 3, use_bias=False, kernel_regularizer=l2(0.01))) #30 #7  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(MaxPooling2D(pool_size=(2, 2))) #15 #8  
+  
+model.add(SeparableConv2D(64, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #15 #12  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(SeparableConv2D(64, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #15 #16  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(SeparableConv2D(64, 3, 3, use_bias=False, kernel_regularizer=l2(0.01))) #13 #20  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(MaxPooling2D(pool_size=(2, 2))) #6 #22  
+  
+model.add(SeparableConv2D(128, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #6 #30  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(SeparableConv2D(128, 3, 3, border_mode='same', use_bias=False, kernel_regularizer=l2(0.01))) #6 #38  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())  
+model.add(Dropout(0.2))  
+model.add(SeparableConv2D(256, 3, 3, use_bias=False, kernel_regularizer=l2(0.01))) #4 #46  
+model.add(Activation('relu'))  
+model.add(BatchNormalization())   
+model.add(Dropout(0.2))   
+model.add(MaxPooling2D(pool_size=(2, 2))) #2 #50  
+  
+model.add(SeparableConv2D(num_classes, 1, 1)) #2 #50  
+  
+model.add(GlobalAveragePooling2D())  
+model.add(Activation('softmax'))  
+  
+  
 Epoch 1/50
 
 Epoch 00001: LearningRateScheduler setting learning rate to 0.005.
