@@ -80,4 +80,14 @@ Epoch 20/20
 Epoch 00020: LearningRateScheduler setting learning rate to 0.000141623.
 60000/60000 [==============================] - 7s 123us/step - loss: 0.0130 - acc: 0.9957 - val_loss: 0.0186 - val_acc: 0.9937
 
+
 [0.018621038327012503, 0.9937]
+
+
+I would like to tell a bit about what I infered while going through the 8 codes, that helped me figure out the approach about how to  build the model from ground.
+
+Initially, we had a very basic, random model. SO we increased the no. of channels and depth to have a proper model. Now, we had to use small number of parameters, therefore we reduced them by reducing the no. of layers and no. of channels. Though, this could have affected our model a lot, it didnt. This led us to a conclusion that our image dataset might not be complex enough to require very large no. of feature maps and a receptive field of 7x7 was enough to capture the complex features. Now, batch normalization could help our model learn easily by normalizing the images along with small inclease in the no. of channels helped significantly. But by now, we could easily see some over fitting as though the changes showed significant upgrade in test accuracy, it didn't work well with the test. Regularization was an option here, so we went for dropout. Though this reduced the gap between the two accuracies, the training loss was not getting significant reductions in the later epoches. Therefore, using lesser learning rates helped skip local minima trap and adjusting the model a bit in terms of no. of parameters led us to a good result.
+
+This understanding helped me to begin from scratch and analyse, what the model was actually going through and how to overcome that and build the required model.
+
+One additional thing that i noticed was, adding multiple layers in the initial part of the model, then mixing the using 1x1 kernals and keeping the later part shallow was less useful than the other way,i.e., keeping larger receptive field after 1x1. Is this because extracting less features initially, mixing them and then extrcting more features using larger GRF is helping model make better conclutions due to many features available before the final layer? Please correct me if I am wrong. 
