@@ -7,3 +7,4 @@ val_footwear_output_acc: 0.6683 -
 val_pose_output_acc: 0.8518 -   
 val_emotion_output_acc: 0.6991  
 
+![Alt text](model.png?raw=true "Title")
