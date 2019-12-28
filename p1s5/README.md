@@ -7,8 +7,9 @@ val_footwear_output_acc: 0.6683 -
 val_pose_output_acc: 0.8518 -   
 val_emotion_output_acc: 0.6991  
 
+<!-- language: lang-none -->
 __________________________________________________________________________________________________
-Layer (type)                    Output Shape         Param      Connected to                     
+Layer (type)                    Output Shape         Param #     Connected to                     
 ==================================================================================================
 input_1 (InputLayer)            (None, 224, 224, 3)  0                                            
 __________________________________________________________________________________________________
